@@ -1,0 +1,15 @@
+header {
+  background-color: black;
+  color: yellow;
+  font-family: 'New Tegomin', serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
