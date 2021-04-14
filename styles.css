@@ -4,6 +4,8 @@ header {
   font-family: 'New Tegomin', serif;
   text-align: center;
   padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .title {
@@ -12,4 +14,22 @@ header {
 
 .subtitle {
   font-size: 2rem;
+}
+
+.character {
+  width: 20rem; /* 200px */
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+form {
+  background-color: lightyellow;
+  width: clamp(50vw, 80rem, 80vw);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+}
+body {
+  background-color: red;
 }
