@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./styles.css">
   <title>Document</title>
@@ -22,27 +24,43 @@
   <main>
     <form>
       <h3>Take this!</h3>
-      <div>
-        <img src="./assets/guerreiro.jpg" alt="guerreiro" class="character" />
-        <img src="./assets/ladino.jpg" alt="ladino" class="character" />
-        <img src="./assets/mago.jpg" alt="mago" class="character" />
+      <div class="character-container flex">
+        <span class="image-container">
+          <img src="./assets/guerreiro.jpg" alt="guerreiro" class="character" />
+        </span>
+        <span class="image-container">
+          <img src="./assets/ladino.jpg" alt="ladino" class="character" />
+        </span>
+        <span class="image-container">
+          <img src="./assets/mago.jpg" alt="mago" class="character" />
+        </span>
       </div>
-
-      <input class="race" type="text" />
-      <span>raça</span>
-
+      <div class="input-container race-container">
+        <input class="race" type="text" />
+        <p class="moving-label race-text">raça</p>
+      </div>
       <details>
         <summary>Descrição</summary>
+
         <input type="text" />
       </details>
 
-      <div>
-        <input type="number" />
-        <span>INT</span>
-        <input type="number" />
-        <span>STR</span>
-        <input type="number" />
-        <span>DEX</span>
+      <div class="flex">
+        <div class="input-container">
+
+          <input type="number" />
+          <label class="moving-label">INT</label>
+        </div>
+        <div class="input-container">
+
+          <input type="number" />
+          <label class="moving-label">STR</label>
+        </div>
+        <div class="input-container">
+          <input type="number" />
+          <label class="moving-label">DEX</label>
+
+        </div>
       </div>
 
       <button>Criar personagem</button>

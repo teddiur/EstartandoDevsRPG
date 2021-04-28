@@ -1,11 +1,14 @@
 header {
   background-color: black;
   color: yellow;
-  font-family: 'New Tegomin', serif;
   text-align: center;
   padding: 2rem;
   box-sizing: border-box;
   width: 100%;
+}
+
+header * {
+  font-family: 'New Tegomin', serif;
 }
 
 .title {
@@ -17,14 +20,23 @@ header {
 }
 
 .character {
-  width: 20rem; /* 200px */
+  width: 100%;
+  max-width: 20rem;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
 }
 
+.character-container {
+  width: 100%;
+}
+
+.image-container {
+  width: 30%;
+}
+
 form {
-  background-color: lightyellow;
+  background-color: lightgreen;
   width: clamp(50vw, 80rem, 80vw);
   border-radius: 1rem;
   padding: 3rem 2rem;
@@ -35,19 +47,43 @@ input[type='text'],
 input[type='number'] {
   background: transparent;
   border: none;
-  width: 15rem;
+  width: 100%;
   padding: 1rem 2rem;
-  border-bottom: 1px lightgray solid;
+  box-sizing: border-box;
+  border-bottom: 1px solid #bcb1b1;
   transition: background 1s ease-in;
+}
+
+.input-container {
+  overflow: hidden;
+  width: 15rem;
+  position: relative;
+}
+
+.input-container.race-container {
+  width: 50%;
+}
+
+.input-container::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #bcb1b1;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-in;
+}
+
+.input-container:focus-within::before {
+  transform: translateX(0);
 }
 
 input[type='text']:focus,
 input[type='number']:focus {
   outline: none;
-}
-
-input.race {
-  width: 50%;
 }
 
 input[type='text']:hover,
@@ -56,5 +92,21 @@ details:hover,
 details:focus-within,
 input[type='number']:hover,
 input[type='number']:focus {
-  background: #f1f1c1;
+  background: #19ef19;
+  color: white;
+}
+
+.race-text {
+  text-transform: capitalize;
+}
+.moving-label {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
