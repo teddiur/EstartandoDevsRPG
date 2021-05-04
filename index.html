@@ -25,15 +25,25 @@
     <form>
       <h3>Take this!</h3>
       <div class="character-container flex">
-        <span class="image-container">
-          <img src="./assets/guerreiro.jpg" alt="guerreiro" class="character" />
-        </span>
-        <span class="image-container">
-          <img src="./assets/ladino.jpg" alt="ladino" class="character" />
-        </span>
-        <span class="image-container">
-          <img src="./assets/mago.jpg" alt="mago" class="character" />
-        </span>
+        <label class="image-wrapper">
+          <input type="radio" class="input-character" name="character" />
+          <span class="image-container">
+            <img src="./assets/guerreiro.jpg" alt="guerreiro" class="character" />
+          </span>
+        </label>
+        <label class="image-wrapper">
+          <input type="radio" class="input-character" name="character" />
+          <span class="image-container">
+            <img src="./assets/ladino.jpg" alt="ladino" class="character" />
+          </span>
+        </label>
+        <label class="image-wrapper">
+          <input type="radio" class="input-character" name="character" />
+
+          <span class="image-container">
+            <img src="./assets/mago.jpg" alt="mago" class="character" />
+          </span>
+        </label>
       </div>
       <div class="input-container race-container">
         <input class="race" type="text" />

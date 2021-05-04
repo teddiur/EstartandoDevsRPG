@@ -29,12 +29,33 @@ header * {
 
 .character-container {
   width: 100%;
+  position: relative;
+}
+
+.image-wrapper {
+  width: 30%;
+  aspect-ratio: 1;
 }
 
 .image-container {
-  width: 30%;
+  width: 100%;
 }
 
+.input-character {
+  display: none;
+}
+
+.input-character:checked + .image-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: lime;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  display: block;
+}
 form {
   background-color: lightgreen;
   width: clamp(50vw, 80rem, 80vw);
