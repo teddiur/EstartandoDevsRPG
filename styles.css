@@ -18,43 +18,62 @@ header * {
 .subtitle {
   font-size: 2rem;
 }
-
-.character {
-  width: 100%;
-  max-width: 20rem;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.character-container {
-  width: 100%;
-  position: relative;
-}
-
-.image-wrapper {
+label.character {
   width: 30%;
   aspect-ratio: 1;
 }
 
-.image-container {
+.character {
   width: 100%;
 }
 
-.input-character {
+.character-form {
+  flex-direction: column;
+  width: clamp(50%, 100rem, 70%);
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  position: relative;
+  background-color: lightyellow;
+  border-radius: 2rem;
+}
+
+.character-form h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+img.character {
+  position: relative;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.character-container {
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.character-container label {
+  position: relative;
+}
+
+.character-container input {
   display: none;
 }
 
-.input-character:checked + .image-container::before {
+.character:checked + span::before {
   content: '';
-  width: 100%;
-  height: 100%;
-  background-color: lime;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
   display: block;
+  width: calc(100% + 5px);
+  height: calc(100%);
+  background: linear-gradient(yellow 0%, yellow 20%, black 80%, black 100%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  top: -2.5px;
+  left: -2.5px;
 }
 form {
   background-color: lightgreen;
